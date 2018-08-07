@@ -1,12 +1,12 @@
 workspace:
   base: /test
-  path: drupal-core-require
+  path: drupal-core-require-dev
 
 services:
   web:
     image: fpfis/httpd-php-dev:7.1
     environment:
-      - DOCUMENT_ROOT=/test/drupal-core-require
+      - DOCUMENT_ROOT=/test/drupal-core-require-dev
 
 pipeline:
   composer-install:
