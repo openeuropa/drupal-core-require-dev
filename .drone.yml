@@ -12,7 +12,5 @@ pipeline:
   composer-install:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
-    volumes:
-      - /cache:/cache
     commands:
       - composer install
