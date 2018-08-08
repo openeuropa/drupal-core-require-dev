@@ -10,4 +10,4 @@ It applies some patches on ``drupal/core`` that are needed on OPENEUROPA modules
 
 ### Drupal Core 8.6.x
 
-``composer require --dev openeuropa/drupal-core-require-dev 8.6.0-alpha1``
+``composer require --dev openeuropa/drupal-core-require-dev ~8.6``
