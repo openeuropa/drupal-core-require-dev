@@ -12,3 +12,28 @@ It applies some patches on ``drupal/core`` that are needed on OPENEUROPA modules
 ### Drupal Core 8.6.x
 
 ``composer require --dev openeuropa/drupal-core-require-dev ~8.6``
+
+## Installation using Docker Compose
+
+The setup procedure can be simplified by using Docker Compose.
+
+Requirements:
+
+- [Docker](https://www.docker.com/get-docker)
+- [Docker-compose](https://docs.docker.com/compose/)
+
+Copy docker-compose.yml.dist into docker-compose.yml.
+
+You can make any alterations you need for your local Docker setup. However, the defaults should be enough to set the project up.
+
+Run:
+
+```
+$ docker-compose up -d
+```
+
+Then:
+
+```
+$ docker-compose exec web composer install
+```

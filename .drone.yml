@@ -6,11 +6,32 @@ services:
   web:
     image: fpfis/httpd-php-dev:7.1
     environment:
-      - DOCUMENT_ROOT=/test/drupal-core-require-dev
+    - DOCUMENT_ROOT=/test/drupal-core-require-dev
 
 pipeline:
-  composer-install:
+  composer-install-lowest:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
+    volumes:
+    - /cache:/cache
     commands:
-      - composer install
+    - composer update --prefer-lowest --ansi
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: lowest
+
+  composer-install-highest:
+    group: prepare
+    image: fpfis/httpd-php-dev:7.1
+    volumes:
+    - /cache:/cache
+    commands:
+    - composer install --ansi
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: highest
+
+matrix:
+  COMPOSER_BOUNDARY:
+  - lowest
+  - highest
