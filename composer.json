@@ -9,7 +9,8 @@
         "behat/mink": "1.7.x-dev",
         "behat/mink-goutte-driver": "^1.2",
         "behat/mink-selenium2-driver": "1.3.x-dev",
-        "cweagans/composer-patches": "^1.6",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": ">=1.6.0 <=1.6.2",
         "drupal/coder": "^8.2.12",
         "drupal/core": "8.6.x-dev",
         "jcalderonzumba/gastonjs": "^1.0.2",
@@ -29,6 +30,7 @@
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
         "patches": {
             "drupal/core": {
                 "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch",
