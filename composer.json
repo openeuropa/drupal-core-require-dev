@@ -32,8 +32,8 @@
         "patches": {
             "drupal/core": {
                 "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch",
-                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-09-19/2599228-contenttranslation-71.patch",
-                "https://www.drupal.org/project/drupal/issues/2571475": "https://www.drupal.org/files/issues/2018-09-21/outbound_http_requests-2571475-31.patch"
+                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-08-28/2599228-61.patch",
+                "https://www.drupal.org/project/drupal/issues/2571475": "https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch"
             }
         },
         "installer-paths": {
