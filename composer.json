@@ -32,7 +32,7 @@
         "patches": {
             "drupal/core": {
                 "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch",
-                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-08-28/2599228-61.patch",
+                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-09-25/2599228-74.patch",
                 "https://www.drupal.org/project/drupal/issues/2571475": "https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch"
             }
         },
