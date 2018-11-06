@@ -7,6 +7,16 @@
 
 It applies some patches on ``drupal/core`` that are needed for development on OPENEUROPA modules.
 
+## Patches list
+
+- [Patch](https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch) for issue [#2943172](https://www.drupal.org/project/drupal/issues/2943172) -
+Directories can't be ignored when collecting extensions during PHPUnit tests.
+Symlinks inside the Drupal testing instance result in infinite loops.
+- [Patch](https://www.drupal.org/files/issues/2018-10-01/2599228-SQL_error_on_content_creation-78_0.patch) for issue [#2599228](https://www.drupal.org/project/drupal/issues/2599228) -
+Programmatically created translatable content type returns SQL error on content creation.
+- [Patch](https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch) for issue [#2571475](https://www.drupal.org/project/drupal/issues/2571475) -
+Outbound HTTP requests fail with KernelTestBase (TNG).
+                
 ## Usage
 
 ### Drupal Core 8.6.x
