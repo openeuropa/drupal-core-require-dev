@@ -5,28 +5,35 @@ workspace:
 services:
   web:
     image: fpfis/httpd-php-dev:7.1
+    volumes:
+      - /cache:/cache
     environment:
-    - DOCUMENT_ROOT=/test/drupal-core-require-dev
+      - DOCUMENT_ROOT=/test/drupal-core-require-dev
+      - COMPOSER_CACHE_DIR=/cache/composer
 
 pipeline:
+  # Install dependencies.
   composer-install:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
-    volumes:
-    - /cache:/cache
     commands:
     - composer install --ansi --no-suggest --no-progress
 
+  # Update dependencies with --prefer-lowest.
   composer-update-lowest:
     group: prepare-update
     image: fpfis/httpd-php-dev:7.1
-    volumes:
-    - /cache:/cache
     commands:
     - composer update --prefer-lowest --ansi --no-suggest --no-progress
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
+
+  # Check vulnerable packages @Sensiolabs.
+  test-composer-deps:
+    group: check-prepare
+    image: phpdrone/composer-sa-checker
+    lock_file: composer.lock
 
 matrix:
   COMPOSER_BOUNDARY:
