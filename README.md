@@ -16,7 +16,9 @@ Symlinks inside the Drupal testing instance result in infinite loops.
 Programmatically created translatable content type returns SQL error on content creation.
 - [Patch](https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch) for issue [#2571475](https://www.drupal.org/project/drupal/issues/2571475) -
 Outbound HTTP requests fail with KernelTestBase (TNG).
-                
+- [Patch](https://www.drupal.org/files/issues/2018-08-13/2600154-3-60.patch) for issue [#2600154](https://www.drupal.org/project/drupal/issues/2600154) -
+Deprecation warnings in Twig code cause test failures.
+
 ## Usage
 
 ### Drupal Core 8.6.x
