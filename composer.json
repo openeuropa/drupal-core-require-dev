@@ -36,7 +36,7 @@
                 "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-10-01/2599228-SQL_error_on_content_creation-78_0.patch",
                 "https://www.drupal.org/project/drupal/issues/2600154": "https://www.drupal.org/files/issues/2018-08-13/2600154-3-60.patch",
                 "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch",
-                "https://www.drupal.org/project/drupal/issues/2955457": "https://www.drupal.org/files/issues/2019-01-10/2955457.patch"
+                "https://www.drupal.org/project/drupal/issues/2955457": "https://www.drupal.org/files/issues/2019-01-11/2955457-36.patch"
             }
         },
         "installer-paths": {

@@ -18,7 +18,7 @@ Deprecation warnings in Twig code cause test failures.
 - [Patch](https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch) for issue [#2943172](https://www.drupal.org/project/drupal/issues/2943172) -
 Directories can't be ignored when collecting extensions during PHPUnit tests.
 Symlinks inside the Drupal testing instance result in infinite loops.
-- [Patch](https://www.drupal.org/files/issues/2019-01-08/2955457-25.patch) for issue [#2955457](https://www.drupal.org/project/drupal/issues/2955457) -
+- [Patch](https://www.drupal.org/files/issues/2019-01-08/2955457-36.patch) for issue [#2955457](https://www.drupal.org/project/drupal/issues/2955457) -
 ConfigFactory static cache gets polluted with data from config overrides
 
 ## Usage
