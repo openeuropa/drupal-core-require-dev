@@ -5,4 +5,3 @@ services:
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
-      - ~/.cache/composer:/root/.composer/cache # use a local cache.
