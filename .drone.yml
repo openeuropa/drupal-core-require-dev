@@ -25,6 +25,7 @@ pipeline:
     group: prepare-update
     image: fpfis/httpd-php-dev:7.1
     commands:
+      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer update --prefer-lowest --ansi --no-suggest --no-progress
     when:
       matrix:
