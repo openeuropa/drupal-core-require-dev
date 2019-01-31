@@ -17,14 +17,15 @@ pipeline:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
     commands:
-    - composer install --ansi --no-suggest --no-progress
+      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
+      - composer install --ansi --no-suggest --no-progress
 
   # Update dependencies with --prefer-lowest.
   composer-update-lowest:
     group: prepare-update
     image: fpfis/httpd-php-dev:7.1
     commands:
-    - composer update --prefer-lowest --ansi --no-suggest --no-progress
+      - composer update --prefer-lowest --ansi --no-suggest --no-progress
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
