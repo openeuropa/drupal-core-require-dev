@@ -7,6 +7,8 @@ services:
     image: fpfis/php71-dev
     environment:
       - DOCUMENT_ROOT=/test/drupal-core-require-dev
+    volumes:
+      - /cache:/cache
 
 pipeline:
   # Install dependencies.
@@ -16,8 +18,6 @@ pipeline:
     commands:
       - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer install --ansi --no-suggest --no-progress
-    volumes:
-      - /cache:/cache
 
   # Update dependencies with --prefer-lowest.
   composer-update-lowest:
@@ -26,8 +26,6 @@ pipeline:
     commands:
       - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer update --prefer-lowest --ansi --no-suggest --no-progress
-    volumes:
-      - /cache:/cache
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
