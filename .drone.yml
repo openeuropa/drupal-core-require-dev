@@ -4,29 +4,28 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-dev:7.1
-    volumes:
-      - /cache:/cache
+    image: fpfis/php71-dev
     environment:
       - DOCUMENT_ROOT=/test/drupal-core-require-dev
-      - COMPOSER_CACHE_DIR=/cache/composer
 
 pipeline:
   # Install dependencies.
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/php71-dev
     commands:
-      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer install --ansi --no-suggest --no-progress
+    volumes:
+      - /cache:/cache
 
   # Update dependencies with --prefer-lowest.
   composer-update-lowest:
     group: prepare-update
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/php71-dev
     commands:
-      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer update --prefer-lowest --ansi --no-suggest --no-progress
+    volumes:
+      - /cache:/cache
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
@@ -39,5 +38,5 @@ pipeline:
 
 matrix:
   COMPOSER_BOUNDARY:
-  - lowest
-  - highest
+    - highest
+    - lowest
