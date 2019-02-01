@@ -14,6 +14,7 @@ pipeline:
     group: prepare
     image: fpfis/php71-dev
     commands:
+      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer install --ansi --no-suggest --no-progress
     volumes:
       - /cache:/cache
@@ -23,6 +24,7 @@ pipeline:
     group: prepare-update
     image: fpfis/php71-dev
     commands:
+      - composer global require hirak/prestissimo --ansi --no-suggest --no-progress
       - composer update --prefer-lowest --ansi --no-suggest --no-progress
     volumes:
       - /cache:/cache
@@ -35,6 +37,9 @@ pipeline:
     group: check-prepare
     image: phpdrone/composer-sa-checker
     lock_file: composer.lock
+    when:
+      matrix:
+        COMPOSER_BOUNDARY: highest
 
 matrix:
   COMPOSER_BOUNDARY:
