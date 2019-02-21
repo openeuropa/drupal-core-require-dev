@@ -9,6 +9,7 @@ services:
     - DOCUMENT_ROOT=/test/drupal-core-require-dev
 
 pipeline:
+  # Install all dependencies
   composer-install:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
@@ -19,6 +20,7 @@ pipeline:
     commands:
     - composer install --ansi --no-suggest --no-progress
 
+  # Update by lowest dependencies
   composer-update-lowest:
     group: prepare-update
     image: fpfis/httpd-php-dev:7.1
