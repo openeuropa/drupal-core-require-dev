@@ -12,6 +12,8 @@ pipeline:
   composer-install:
     group: prepare
     image: fpfis/httpd-php-dev:7.1
+    environment:
+      - COMPOSER_CACHE_DIR=/cache/composer
     volumes:
     - /cache:/cache
     commands:
@@ -20,6 +22,8 @@ pipeline:
   composer-update-lowest:
     group: prepare-update
     image: fpfis/httpd-php-dev:7.1
+    environment:
+      - COMPOSER_CACHE_DIR=/cache/composer
     volumes:
     - /cache:/cache
     commands:
