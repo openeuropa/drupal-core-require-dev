@@ -11,7 +11,7 @@
         "behat/mink-selenium2-driver": "1.3.x-dev",
         "cweagans/composer-patches": "^1.6",
         "drupal/coder": "^8.2.12",
-        "drupal/core": "8.6.x-dev",
+        "drupal/core": "8.6.14",
         "jcalderonzumba/gastonjs": "^1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
         "mikey179/vfsstream": "^1.2",
@@ -33,7 +33,7 @@
         "patches": {
             "drupal/core": {
                 "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch",
-                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2018-10-01/2599228-SQL_error_on_content_creation-78_0.patch",
+                "https://www.drupal.org/project/drupal/issues/2599228": "https://www.drupal.org/files/issues/2019-03-01/2599228-131.patch",
                 "https://www.drupal.org/project/drupal/issues/2571475": "https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch",
                 "https://www.drupal.org/project/drupal/issues/2600154": "https://www.drupal.org/files/issues/2019-03-14/2600154-rerolling_patch_for_8.6-68.patch"
             }
