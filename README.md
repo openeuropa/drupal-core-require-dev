@@ -5,7 +5,7 @@
 
 ``openeuropa/drupal-core-require-dev`` provides the ``require-dev`` dependencies of ``drupal/core`` as a standalone package. It follows the same release cycle and versioning scheme as Drupal core. You should use the same version constraint for it as you use for Drupal core.
 
-It applies some patches on ``drupal/core`` that are needed for development on OPENEUROPA modules.
+It applies some patches on ``drupal/core`` that are needed for development on OpenEuropa modules.
 
 ## Patches list
 
