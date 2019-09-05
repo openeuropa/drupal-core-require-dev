@@ -30,14 +30,20 @@ Requirements:
 - [Docker](https://www.docker.com/get-docker)
 - [Docker-compose](https://docs.docker.com/compose/)
 
-Copy docker-compose.yml.dist into docker-compose.yml.
-
-You can make any alterations you need for your local Docker setup. However, the defaults should be enough to set the project up.
+The default `docker-compose.yml` file should be enough to set the project up.
 
 Run:
 
 ```
 $ docker-compose up -d
+```
+
+You can make any alterations you need for your local Docker setup, creating a new file `docker-compose.local.yml` with the alterations.
+
+Run:
+
+```
+$ docker-compose -f docker-compose.yml -f docker-compose.local.yml up -d
 ```
 
 Then:
