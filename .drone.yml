@@ -4,14 +4,14 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
+    image: fpfis/httpd-php-dev:7.1
     environment:
       - DOCUMENT_ROOT=/test/drupal-core-require-dev
 
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
+    image: fpfis/httpd-php-dev:7.1
     volumes:
       - /cache:/cache
     commands:
@@ -19,7 +19,7 @@ pipeline:
 
   composer-update-lowest:
     group: prepare-update
-    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
+    image: fpfis/httpd-php-dev:7.1
     volumes:
       - /cache:/cache
     commands:
@@ -32,6 +32,3 @@ matrix:
   COMPOSER_BOUNDARY:
     - lowest
     - highest
-  PHP_VERSION:
-    - 7.1
-    - 7.2
