@@ -4,20 +4,24 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-full:${PHP_VERSION=7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.1}
     environment:
       - DOCUMENT_ROOT=/test/drupal-core-require-dev
 
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-full:${PHP_VERSION=7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.1}
+    volumes:
+      - /cache/${DRONE_REPO_NAME}:/cache
     commands:
       - composer install --ansi --no-suggest --no-progress
 
   composer-update-lowest:
     group: prepare-update
-    image: fpfis/httpd-php-full:${PHP_VERSION=7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.1}
+    volumes:
+      - /cache/${DRONE_REPO_NAME}:/cache
     commands:
       - composer update --prefer-lowest --ansi --no-suggest --no-progress
     when:
