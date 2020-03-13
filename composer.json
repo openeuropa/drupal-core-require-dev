@@ -6,10 +6,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "php": "^7.1",
         "cweagans/composer-patches": "^1.6",
-        "drupal/core-dev": "8.8.0",
-        "drupal/core": "8.8.0",
-        "php": "^7.1"
+        "drupal/core-dev": "8.8.x-dev",
+        "drupal/core": "8.8.x-dev"
     },
     "repositories": {
         "drupal": {
