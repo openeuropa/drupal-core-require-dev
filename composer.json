@@ -15,7 +15,7 @@
         "jcalderonzumba/gastonjs": "^1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
         "mikey179/vfsStream": "^1.2",
-        "php": "~7.2.0 || ~7.3.0",
+        "php": ">=7.2",
         "phpunit/phpunit": "^6.5",
         "phpspec/prophecy": "^1.7",
         "symfony/css-selector": "^3.4.0",
