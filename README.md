@@ -9,7 +9,7 @@ It applies some patches on ``drupal/core`` that are needed for development on OP
 
 ## Patches list
 
-- [Patch](https://www.drupal.org/files/issues/2018-07-05/2943172-kernel-test-base-3.patch) for issue [#2943172](https://www.drupal.org/project/drupal/issues/2943172) -
+- [Patch](https://www.drupal.org/files/issues/2021-01-27/2943172-kernel-test-base-60.patch) for issue [#2943172](https://www.drupal.org/project/drupal/issues/2943172) -
 Directories can't be ignored when collecting extensions during PHPUnit tests.
 Symlinks inside the Drupal testing instance result in infinite loops.
 - [Patch](https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch) for issue [#2571475](https://www.drupal.org/project/drupal/issues/2571475) -
@@ -17,9 +17,9 @@ Outbound HTTP requests fail with KernelTestBase (TNG).
 
 ## Usage
 
-### Drupal Core 8.8.x
+### Drupal Core 8.9.x
 
-``composer require --dev openeuropa/drupal-core-require-dev ~8.8``
+``composer require --dev openeuropa/drupal-core-require-dev ~8.9``
 
 ## Installation using Docker Compose
 
