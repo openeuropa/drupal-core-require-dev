@@ -8,8 +8,8 @@
     "require": {
         "php": "~7.2.0 || ~7.3.0",
         "cweagans/composer-patches": "^1.6",
-        "drupal/core-dev": "8.9.x",
-        "drupal/core": "8.9.x"
+        "drupal/core-dev": "8.9.15",
+        "drupal/core": "8.9.15"
     },
     "repositories": {
         "drupal": {
@@ -21,8 +21,7 @@
         "composer-exit-on-patch-failure": true,
         "patches": {
             "drupal/core": {
-                "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2021-01-27/2943172-kernel-test-base-60.patch",
-                "https://www.drupal.org/project/drupal/issues/2571475": "https://www.drupal.org/files/issues/outbound_http_requests-2571475-10.patch"
+                "https://www.drupal.org/project/drupal/issues/2943172": "https://www.drupal.org/files/issues/2021-01-27/2943172-kernel-test-base-60.patch"
             }
         },
         "installer-paths": {
